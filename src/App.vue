@@ -298,7 +298,7 @@ input, select {
 
 #eyecatch {
   height: 600px;
-  background: url(./assets/img (3)/img/bg1.jpg)
+   background: url(./assets/bg1.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -354,7 +354,7 @@ input, select {
 }
 
 #business {
-  background: url(./assets/img (3)/img/bg3.jpg) no-repeat;
+  background: url(./assets/bg3.jpg) no-repeat;
   background-size: cover;
 }
 
