@@ -1,110 +1,85 @@
 <template>
   <div id="app">
-    <CommonHeader></CommonHeader>  
+    <CommonHeader></CommonHeader>
     <main>
-      <div id="eyecatch">
-        <p>estra</p>
-      </div>
-
-
-      <div id="about">
-        <h2 class="section-title">about</h2>
-        <div class="about-wrap">
-          <div class="about-left">
-            <img src="./assets/img (3)/img/bg2.jpg" alt="" />
-          </div>
-          <div class="about-right">
-            <h3>estra inc.</h3>
-            <p>
-              私たちは、お客様の満足度を徹底的に追及することで、お客様・市場・時代のニーズを的確に捉え、事業の拡大と周辺ビジネスによる差別化、業界における圧倒的な地位の確立を図るべく積極的な事業活動を行っています。
+      <div id="firstview">
+        <p class="catchcopy">機械ではできない仕事を</p>
+        <div class="news flex">
+          <div class="news-content">
+            <p class="news_data">2019/01/01</p>
+            <p class="news_title">
+              ニュースタイトルがここには入ります。3月の決算報告書
             </p>
-            <ol>
-              <li>コーチング事業</li>
-              <li>プログラミング事業</li>
-              <li>SaaS事業</li>
-            </ol>
+          </div>
+          <div class="news-icon">news</div>
+        </div>
+      </div>
+      <div class="mission">
+        <div class="mission-content">
+          <h2 class="mission_title">
+            お客様のために進化する成長企業であり続ける
+          </h2>
+          <p class="mission_text">
+            顧客主導型サービスを提供する企業として、お客様の会社経営に必要なサービスと情報を提供し続ける企業支援会社を目指します。企業が現在直面している「勝ち残るため」の戦略を提供できる会社として、ホームページをはじめ、各種マーケティングを提供いたします。
+          </p>
+          <a href="" class="common-btn mission-btn">ミッション詳細</a>
+        </div>
+        <div class="mission-img">
+          <img src="./assets/img/mission-img.jpg" alt="">
+        </div>
+      </div>
+      <div class="service">
+        <h2 class="service-title section-title">service</h2>
+        <div class="service-content">
+          <div class="service-img">
+            <img src="./assets/img/service2.jpg" alt="">
+          </div>
+          <div class="service-content_inner">
+            <h3 class="mgb-15">Web制作事業</h3>
+            <p class="mgb-15">コーチングのミッション</p>
+            <p class="mgb-15">
+              ユーザーが求める物を分析し、ユーザビリティを備えた最適なサイトを提供。建設業から美容、ブライダル、飲食店まで多種多様な業種の制作実績があります
+            </p>
+            <a href="" class="common-btn service-btn">サービス詳細</a>
+          </div>
+        </div>
+        <div class="service-content">
+          <div class="service-img service-img_second">
+            <img src="./assets/img/service1.jpg" alt="">
+          </div>
+          <div class="service-content_inner service-content_inner-second">
+            <h3 class="mgb-15">Web制作事業</h3>
+            <p class="mgb-15">コーチングのミッション</p>
+            <p class="mgb-15">ユーザーが求める物を分析し、ユーザビリティを備えた最適なサイトを提供。建設業から美容、ブライダル、飲食店まで多種多様な業種の制作実績があります</p>
+            <a href="" class="common-btn service-btn">サービス詳細</a>
           </div>
         </div>
       </div>
-
-
-      <div id="business">
-        <h2 class="section-title">service</h2>
-        <div class="business-wrap">
-          <div class="business-cat" v-for="(data,index) in business" :key="index">
-            <img :src="data.img" alt />
-            <h3>{{data.title}}</h3>
-            <p>{{data.description}}</p>
+      <div class="company">
+        <div class="recruit-company flex">
+          <div class="recruit-company_size company-img">
+            <h2 class="company-title section-title">
+              company<br /><span>会社概要</span>
+            </h2>
+          </div>
+          <div class="recruit-company_size recruit-img">
+            <h2 class="company-title section-title">recruit<br /><span>採用情報</span> 
+            </h2>
           </div>
         </div>
       </div>
-
-
-      <div id="company">
-        <h2 class="section-title">company</h2>
-        <table class="contain">
-          <tr>
-            <th>会社名</th>
-            <td>株式会社estra</td>
-          </tr>
-          <tr>
-            <th>代表者名</th>
-            <td>福場凛太郎</td>
-          </tr>
-          <tr>
-            <th>本社所在地</th>
-            <td>東京都渋谷区1-1</td>
-          </tr>
-          <tr>
-            <th>従業員数</th>
-            <td>100名</td>
-          </tr>
-          <tr>
-            <th>電話番号</th>
-            <td>0120-000-0000</td>
-          </tr>
-          <tr>
-            <th>FAX</th>
-            <td>0120-000-0000</td>
-          </tr>
-          <tr>
-            <th>メールアドレス</th>
-            <td>rintaro@estra.inc</td>
-          </tr>
-          <tr>
-            <th>資本金</th>
-            <td>1000万円</td>
-          </tr>
-          <tr>
-            <th>事業内容</th>
-            <td>コーチング</td>
-          </tr>
-        </table>
+      <div class="faq">
+        <h2 class="faq-title">FAQ</h2>
+        <p class="faq-title-jp">よくある質問</p>
       </div>
-
-      <div id="contact">
-        <h2 class="section-title">contact</h2>
-        <form class="form" method="post" @submit.prevent="sendContact()">
-          <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="user_name" />
-          </div>
-          <div>
-            <label for="mail">E-mail:</label>
-            <input type="email" id="mail" name="user_mail">
-          </div>
-          <div>
-            <label for="tell">Tell:</label>
-            <input type="tel" id="tel" name="user_tel">
-          </div>
-          <div>
-            <label for="msg">Message:</label>
-            <textarea name="user_message" id="msg" ></textarea>
-          </div>
-          <div class="button-submit">
-            <button class="button" type="submit">Button</button>
-          </div>
-        </form>
+      <div class="contact">
+        <h2 class="contact-title section-title">contact<br /><span>お問い合わせ</span>
+        </h2>
+        <p class="contact-subtitle section-title">お気軽にお問い合わせください。</p>
+        <p class="contact-text">
+          資料請求・お問い合わせなどなんでも気軽にお問い合わせください。お仕事のご連絡もお問い合わせページに飛んでいただいて、入力フォームにご記入お願いいたします。
+        </p>
+        <a href="" class="common-btn contact-btn">お問い合わせへ</a>
       </div>
     </main>
     <CommonFooter></CommonFooter>
@@ -112,61 +87,22 @@
 </template>
 
 <script>
-import CommonHeader from "./components/CommonHeader.vue";
-import CommonFooter from "./components/CommonFooter.vue";
+import CommonHeader from "./components/CommonHeader";
+import CommonFooter from "./components/CommonFooter";
 export default {
-  data() {
-    return {
-      business: [
-        {
-          img: require("./assets/img (3)/img/business-icon.png"),
-          title: "ビジネスA",
-          description: 
-          "ビジネスの説明が入ります。ビジネスの説明が入ります。ビジネスの説明が入ります。ビジネスの説明が入ります。ビジネスの説明が入ります。ビジネスの説明が入ります。"
-        },
-        {
-          img: require("./assets/img (3)/img/business-icon.png"),
-          title: "ビジネスB",
-          description:
-          "ビジネスの説明が入ります。ビジネスの説明が入ります。ビジネスの説明が入ります。ビジネスの説明が入ります。ビジネスの説明が入ります。ビジネスの説明が入ります。"
-        },
-        {
-          img: require("./assets/img (3)/img/business-icon.png"),
-          title: "ビジネスC",
-          description: 
-          "ビジネスの説明が入ります。ビジネスの説明が入ります。ビジネスの説明が入ります。ビジネスの説明が入ります。ビジネスの説明が入ります。ビジネスの説明が入ります。"
-        }
-      ],
-      text: "",
-      email: "",
-      tel: "",
-      msg: ""
-    };
-  },
   components: {
     CommonHeader,
     CommonFooter
-  },
-  methods: {
-    sendContact() {
-      if (
-        this.text == "" ||
-        this.email == "" ||
-        this.tel == "" ||
-        this.msg == "" 
-      ) {
-        alert("入力されていない項目があります");
-      } else {
-        this.text = "";
-        this.email = "";
-        this.tel ="";
-        this.msg ="";
-        alert("送信しました");
-      }
-    }
   }
 };
 </script>
+
+
+
+
+
+
+
 
 <style>
 html, body, div, span, object, iframe,
@@ -264,256 +200,310 @@ input, select {
   vertical-align:middle;
 }
 
-.header {
-  height: 70px;
-  background: #000;
+a {
+  color: #333333;
+  text-decoration: none;
 }
 
-.header-wrap {
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.header-logo {
+body {
+  color: #333333;
+  height: 100%;
+}
+
+.mgb-15 {
+  margin-bottom: 15px;
+}
+
+.common-btn {
+  display: block;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  padding: 0 20px;
+  color: #000;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 40px;
+  line-height: 1;
+}
+
+.section-title span {
   font-size: 20px;
-  font-weight: bold;
-  margin-left: 35px;
-  color: #f2f2f2;
-  line-height: 70px;
 }
 
-.header-nav ul{
-  display: flex;
-}
-
-.header-nav li {
-  margin-right: 35px;
-  font-size: 16px;
-}
-
-.header-nav a {
-  color: #f2f2f2;
-}
-
-#eyecatch {
-  height: 600px;
-   background: url(./assets/img (3)/img/bg1.jpg) no-repeat;
+#firstview {
+  height: 800px;
+  background: url(./assets/img/eyecatch.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
-#eyecatch p {
+.catchcopy {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  font-size: 60px;
+  font-style:italic;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1;
+}
+
+.news {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+}
+
+.news-content {
+  background: #fff;
+  width: 80%;
+  height: 70px;
+}
+
+.news_data {
+  padding-left: 5px;
+}
+
+.news_title {
+  padding-left: 0 15px;
+}
+
+.news-icon {
+  background:#000;
+  width: 20%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  color: #fff;
+}
+
+.mission {
+  position: relative;
+  background: #000;
+  margin-bottom:50px;
+  z-index: 999;
+}
+
+.mission-content {
+  padding: 10% 0 10% 20%;
+  box-sizing: border-box;
+  width: 70%;
+}
+
+.mission_title,
+.mission_text {
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.mission_title {
+  font-size: 30px;
+}
+
+.mission-img {
+  width: 40%;
+  position: absolute;
+  bottom: -10%;
+  right: 5%;
+  z-index:-999;
+}
+
+.service {
+  background: #e5e5e5;
+  margin-bottom: 20px;
+}
+
+.service-title {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.service-content {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.service-img {
+  width: 50%;
+  margin-left: 50%;
+}
+
+.service-img_second {
+  margin: 0 50% 0 0;
+}
+
+.service-content_inner {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  background:#fff;
+  width: 40%;
+  padding: 5% 5%;
+  box-sizing: border-box;
+}
+
+.service-content_inner-second {
+  left: 40%;
+}
+
+.service-btn {
+  border: 1px solid #000;
+  margin: 0 0 0 auto;
+}
+
+.company {
+  margin-bottom: 10%;
+}
+
+.recruit-company_size {
+  width: 48%;
+  height: 300px;
+  position: relative;
+}
+
+.company-img {
+  background: url(./assets/img/company.jpeg) center/cover no-repeat;
+}
+
+.recruit-img {
+  background: url(./assets/img/recruit.jpg) center/cover no-repeat;
+}
+
+.company-title {
+  text-align: center;
+  color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 100px;
-  font-style: italic;
-  font-weight: bold;
-  color: #ccc;
-  line-height: 1;
 }
 
-#about {
-  width: 80%;
-  margin: 0 auto 50px;
-}
-
-#about .section-title {
-  font-size: 30px;
-  font-weight: bold;
-  margin: 30px 0;
-  text-align: center;
-}
-
-.about-wrap{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.about-right h3,
-.about-right p {
-  margin-bottom: 15px;
-}
-
-.about-left,
-.about-right {
-  width: 45%;
-}
-
-.about-right ol {
-  list-style-position: inside;
-}
-
-.about-left img{
-  display: block;
-  width: 100%;
-}
-
-#business {
-  background: url(./assets/img(3)/img/bg3.jpg) no-repeat;
-  background-size: cover;
-}
-
-#business .section-title {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  color: #fff;
-  padding: 40px 0;
-  margin: 0;
-}
-
-.business-wrap {
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.business-cat {
-  width: 28%;
-  background-color: rgba(51, 51, 51, 0.5);
-  padding: 20px 35px 30px;
-  box-sizing: border-box;
-  margin-bottom: 50px;
-}
-
-.business-cat h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.company-title span {
   color: #fff;
 }
 
-.business-cat p {
-  color: #fff;
-}
-
-.business-cat img {
-  width: 100px;
-  height: auto;
-  margin: 0 auto 10px;
-}
-
-#company {
-  padding: 40px 0 70px 0;
-}
-
-#company .section-title {
-  font-size: 30px;
-  font-weight: bold;
-  margin: 30px 0;
-  text-align: center;
-}
-
-#company .contain {
-  border-collapse: collapse;
+.faq {
   width: 70%;
-  margin: 0 auto;
+  background: #000;
+  margin: 0 auto 10%;
+  padding: 50px;
 }
 
-#company table tr {
-  border-bottom: 1px solid #333333;
-}
-
-#company th,
-#company td {
-  text-align: left;
-}
-
-#company th {
-  padding: 10px 0;
-}
-
-#contact {
-  background: rgb(241, 241, 241);
-}
-
-#contact .section-title {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  padding: 40px 0;
-  margin: 0;
-}
-
-.form {
-  width: 70%;
-  margin: 0 auto;
-}
-
-label {
+.faq-title,
+.faq-title-jp {
   display: inline-block;
-  width: 30%;
-}
-
-input,
-textarea {
-  box-sizing: border-box;
-  border: 1px solid #999;
-  width: 65%;
-}
-
-input {
-  margin-bottom: 20px;
-  padding: 7px;
-}
-
-textarea {
-  vertical-align: top;
-  height: 200px;
-}
-
-.button-submit {
-  text-align: center;
-}
-
-.button {
-  padding: 10px 30px;
-  background-color: #000;
   color: #fff;
-  margin: 30px 0;
 }
 
-#footer {
-  height: 80px;
+.faq-title {
+  font-size: 40px;
+  width:10%;
+}
+
+.faq-title-jp {
+  font-size: 20px;
+  width: 80%;
   text-align: center;
-  line-height: 80px;
 }
 
-@media screen and (max-width: 768px){
-  .about-wrap{
-    flex-wrap: wrap;
-  }
+.contact {
+  background: url(./assets/img/contact-bg.jpg) center/cover no-repeat;
+  padding: 10%;
+}
 
-  .about-left,
-  .about-right {
+.contact-title,
+.contact-title span,
+.contact-subtitle,
+.contact-text,
+.contact-btn {
+  color: #fff;
+  text-align: center;
+}
+
+.contact-title,
+.contact-subtitle,
+.contact-text {
+  margin-bottom: 40px;
+}
+
+.contact-btn {
+  margin: 0 auto;
+  background: none;
+  border: 1px solid #fff;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+  .catchcopy {
+    top: 50%;
+    left: 50%;
     width: 80%;
+    text-align: center;
+    transform: translate(-50%, -50%);
   }
-
-  .business-wrap{
-    flex-wrap: wrap;
-  }
-
-  .business-cat {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  label {
-    display: block;
-  }
-
-  .form div {
-    margin: 0 auto;
-  }
-
-  input,textarea {
+  .news {
     width: 100%;
+  }
+  .mission-content {
+    padding: 10% 0;
+    margin: 0 auto;
+  }
+  .service-content_inner {
+    width: 60%;
+    left: 10%;
+  }
+  .service-img {
+    width: 70%;
+    margin-left: 30%;
+  }
+  .service-img_second {
+    margin: 0 30% 0 0;
+  }
+  .service-content_inner-second {
+    left: 30%;
+  }
+  .service-content {
+    margin: 0 auto;
+  }
+  .service-content_inner {
+    width: 90%;
+    position: inherit;
+    background: rgba(255, 255, 255, 0.8);
+    left: 5%;
+  }
+  .service-img {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .recruit-company_size {
+    width: 100%;
+  }
+  .faq-title {
+    font-size: 30px;
   }
 }
 </style>
